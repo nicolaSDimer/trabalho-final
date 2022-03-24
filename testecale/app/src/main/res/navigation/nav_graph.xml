@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.matheus.testecale.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/send_Data"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_loog"
+            app:destination="@id/loog" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.matheus.testecale.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_fourFragment"
+            app:destination="@id/fourFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_loog"
+            app:destination="@id/loog" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourFragment"
+        android:name="com.matheus.testecale.FourFragment"
+        android:label="fragment_four"
+        tools:layout="@layout/fragment_four" >
+        <action
+            android:id="@+id/action_fourFragment_to_fiveFragment"
+            app:destination="@id/fiveFragment" />
+        <action
+            android:id="@+id/action_fourFragment_to_loog"
+            app:destination="@id/loog" />
+    </fragment>
+    <fragment
+        android:id="@+id/fiveFragment"
+        android:name="com.matheus.testecale.FiveFragment"
+        android:label="fragment_five"
+        tools:layout="@layout/fragment_five" >
+        <action
+            android:id="@+id/action_fiveFragment_to_sixFragment"
+            app:destination="@id/sixFragment" />
+        <action
+            android:id="@+id/action_fiveFragment_to_loog"
+            app:destination="@id/loog" />
+    </fragment>
+    <fragment
+        android:id="@+id/sixFragment"
+        android:name="com.matheus.testecale.sixFragment"
+        android:label="fragment_six"
+        tools:layout="@layout/fragment_six" >
+        <action
+            android:id="@+id/action_sixFragment_to_loog"
+            app:destination="@id/loog" />
+    </fragment>
+    <fragment
+        android:id="@+id/loog"
+        android:name="com.matheus.testecale.loog"
+        android:label="fragment_loog"
+        tools:layout="@layout/fragment_loog" >
+        <action
+            android:id="@+id/action_loog_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.matheus.testecale.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_match"
+            app:destination="@id/match" />
+    </fragment>
+    <fragment
+        android:id="@+id/match"
+        android:name="com.matheus.testecale.match"
+        android:label="fragment_match"
+        tools:layout="@layout/fragment_match" >
+        <action
+            android:id="@+id/action_match_to_chat"
+            app:destination="@id/chat" />
+    </fragment>
+    <fragment
+        android:id="@+id/chat"
+        android:name="com.matheus.testecale.chat"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chat_to_yourchats"
+            app:destination="@id/yourchats" />
+    </fragment>
+    <fragment
+        android:id="@+id/yourchats"
+        android:name="com.matheus.testecale.yourchats"
+        android:label="fragment_yourchats"
+        tools:layout="@layout/fragment_yourchats" >
+        <action
+            android:id="@+id/action_yourchats_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_yourchats_to_user"
+            app:destination="@id/user" />
+        <action
+            android:id="@+id/action_yourchats_self"
+            app:destination="@id/yourchats" />
+        <action
+            android:id="@+id/action_yourchats_to_home22"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/user"
+        android:name="com.matheus.testecale.user"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" />
+
+</navigation>
